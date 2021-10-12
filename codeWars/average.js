@@ -6,3 +6,11 @@ function getAverage(marks){
     }
     return Math.floor (sum / marks.length);
   }
+
+  /* Альтернатива
+  
+    function getAverage(marks){
+    return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+  }
+
+  */
