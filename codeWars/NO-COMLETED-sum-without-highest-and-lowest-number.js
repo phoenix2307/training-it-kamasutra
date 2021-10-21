@@ -33,17 +33,17 @@ function sumArray(array) {
 
 
 // Не смог решить
+//reduce здесь почему то не работает - нужно сумировать элементы массива через перебор, как в BP
+// исключая первый и последний элемент (минимум и максимум)
 
 function sumArray(array) {
     if (array && array.length > 1) {
         // const sum = array.reduce((total, current) => total + current, 0);
         const min = Math.min.apply(null, array);
         const max = Math.max.apply(null, array);
-        let newArr = array.filter(item => item > min && item < max);
-        return newArr;
-    
-        // const total = newArr.reduce((total, current) => total + current, 0);    
-        // return total;
+        let newArr = array.filter(item => item > min && item < max);    
+        const total = newArr.reduce((total, current) => total + current, 0);    
+        return total;
     } else {
         return 0;
     }
