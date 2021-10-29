@@ -20,12 +20,12 @@ function enough(cap, on, wait) {
 }
 
 //or
-function enough(cap, on, wait) {
+function enough2(cap, on, wait) {
     return (on+wait > cap) ? on+wait-cap : 0;
 }
 
 //MP
-function enough(cap, on, wait) {
+function enough3(cap, on, wait) {
     let freeSpace = cap - on;
     if (wait > freeSpace) {
       return wait - freeSpace;
