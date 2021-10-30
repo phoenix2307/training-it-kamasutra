@@ -5,11 +5,11 @@ function abbrevName(name){
     return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase(); // обращаюсь к строкам как к вложеному массиву
     // КРУТО
 }
+abbrevName(name)
 
 
 //My solution
-function abbrevName(name){
-    // code away
+function abbrevName2(name){
     let arr = name.toUpperCase().split('');
     for (let i=0; i<=arr.length; i++) {
         if (arr[i] === ' ') {
@@ -17,3 +17,4 @@ function abbrevName(name){
         }
     }
 }
+abbrevName2(name)
